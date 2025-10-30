@@ -1,5 +1,5 @@
 /* ========================================= */
-/* ===== 1. ESTILOS GENERALES Y RESETEO ===== */
+/* ===== 0. ESTILOS GENERALES Y RESETEO ===== */
 /* ========================================= */
 * {
     margin: 0;
@@ -15,7 +15,7 @@ body {
 }
 
 /* ========================================= */
-/* ===== 2. NAVBAR (Barra de navegación) ===== */
+/* ===== 1. NAVBAR (Barra de navegación) ===== */
 /* ========================================= */
 .navbar {
     position: sticky;
@@ -64,7 +64,7 @@ body {
 }
 
 /* ========================================= */
-/* ===== 3. LAYOUT DE SECCIONES (Base) ===== */
+/* ===== 2. LAYOUT DE SECCIONES (Base) ===== */
 /* ========================================= */
 /* Definición de altura fija (viewport height) para cada sección */
 #home { 
@@ -95,6 +95,10 @@ body {
     height: 80vh; 
 }
 
+#referentes{ 
+    height: 50vh; 
+}
+
 /* Estilos comunes a todas las secciones */
 section {
     display: flex;
@@ -114,7 +118,7 @@ section:nth-child(even) {
 }
 
 /* ========================================= */
-/* ===== 4. SECCIÓN HOME ===== */
+/* ===== 3. SECCIÓN HOME ===== */
 /* ========================================= */
 #home {
     position: relative;
@@ -197,7 +201,7 @@ section:nth-child(even) {
 }
 
 /* ========================================= */
-/* ===== 5. SECCIÓN ABOUT ME ===== */
+/* ===== 4. SECCIÓN ABOUT ME ===== */
 /* ========================================= */
 #about {
     display: flex;
@@ -253,7 +257,7 @@ section:nth-child(even) {
 }
 
 /* ========================================= */
-/* ===== 6. SECCIÓN SKILLS (Habilidades) ===== */
+/* ===== 5. SECCIÓN SKILLS (Habilidades) ===== */
 /* ========================================= */
 #skills {
     background-color: #1A1F22;
@@ -355,7 +359,7 @@ section:nth-child(even) {
 }
 
 /* ========================================= */
-/* ===== 7. SECCIÓN EDUCATION (Educación) ===== */
+/* ===== 6. SECCIÓN EDUCATION (Educación) ===== */
 /* ========================================= */
 #education {
     display: flex;
@@ -438,6 +442,22 @@ section:nth-child(even) {
     margin-bottom: 9px;
 }
 
+/* ========================================= */
+/* ===== 7. SECCIÓN CERTIFICADOS (Certificados) ===== */
+/* ========================================= */
+#certificados{
+    height: 90vh;
+    background-color: #1A1F22;
+}
+
+.card-img-top {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    }
+
+.titulo-seccion-certificados{
+    color: #fff;
+}
 
 /* ========================================= */
 /* ===== 8. SECCIÓN EXPERIENCE (Experiencia) ===== */
@@ -538,6 +558,11 @@ section:nth-child(even) {
 /* ========================================= */
 /* ===== 9. SECCIÓN PORTAFOLIO ===== */
 /* ========================================= */
+
+
+/* ========================================= */
+/* ===== 10. SECCIÓN PORTAFOLIO ===== */
+/* ========================================= */
 #portafolio .container {
     padding: 0 20px;
     width: 100%;
@@ -594,11 +619,15 @@ section:nth-child(even) {
 }
 
 /* ========================================= */
-/* ===== 10. SECCIÓN CONTACTO ===== */
+/* ===== 11. SECCIÓN CONTACTO ===== */
 /* ========================================= */
 #contact {
     min-height: 50vh;
     overflow: hidden; 
+}
+
+.titulo-seccion-contacto{
+    color: #000;
 }
 
 .contenedor-contacto{
