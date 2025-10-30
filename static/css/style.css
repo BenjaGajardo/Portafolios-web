@@ -11,7 +11,7 @@
 
 body {
     scroll-behavior: smooth;
-    overflow-x: hidden; /* Evita desbordamiento horizontal */
+    overflow-x: hidden; 
 }
 
 /* ========================================= */
@@ -54,20 +54,15 @@ body {
     margin-right: 100px;
 }
 
-/* El elemento de la lista ahora es el más importante */
 .nav-lista {
     list-style: none;
-    /* En escritorio, se comporta como una fila normal */
     display: flex; 
     gap: 30px;
     margin-top: 10px;
     display: flex;
-    /* La clave es permitir que la lista se envuelva */
     flex-wrap: wrap;
-    
-    /* Le damos mucha prioridad para ocupar el espacio */
     flex-grow: 1; 
-    justify-content: flex-end; /* Alinea los enlaces a la derecha */
+    justify-content: flex-end; 
 }
 
 .nav-lista a {
@@ -144,8 +139,8 @@ section:nth-child(even) {
     min-height: 80vh;
 
 background-image: url('../resources/imganes/fondo_home.jpg'); 
-    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-    background-position: center; /* Centra la imagen */
+    background-size: cover; 
+    background-position: center; 
     background-repeat: no-repeat;
 }
 
@@ -507,8 +502,8 @@ background-image: url('../resources/imganes/fondo_home.jpg');
 }
 
 .card-img-top {
-    width: 100%; /* Asegura que la imagen ocupe todo el ancho de su contenedor */
-    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    width: 100%;
+    height: auto; 
     }
 
 .titulo-seccion-certificados{
@@ -553,7 +548,7 @@ background-image: url('../resources/imganes/fondo_home.jpg');
 /* Contenedor principal del contenido (Texto a la izquierda, Imágenes a la derecha) */
 .contenedor-hijo-mayor {
     display: flex;
-    flex-direction: row-reverse; /* Mantiene la inversión de orden */
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     width: 90%;
