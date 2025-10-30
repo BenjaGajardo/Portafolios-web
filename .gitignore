@@ -1,0 +1,30 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Entornos virtuales (si usas Python)
+.venv/
+env/
+__pycache__/
+
+# Dependencias de Node.js (si llegas a usar Node)
+node_modules/
+
+# Archivos de logs
+*.log
+
+# Archivos de configuración del editor
+.vscode/
+.idea/
+
+# Archivos compilados o temporales
+*.tmp
+*.swp
+*.bak
+
+# Build o dist
+/dist/
+/build/
+
+# Archivos sensibles
+*.env
