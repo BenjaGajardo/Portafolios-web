@@ -19,4 +19,4 @@ Estudiante de la especialidad de Programación, Liceo Comercial Vate Vicente Hui
 ## Instrucciones de visualización
 1. Clonar o descargar este repositorio:
    ```bash
-   git clone https://github.com/BenjaGajardo/NombreDelRepositorio.git
+   git clone https://github.com/BenjaGajardo/Portafolios-web.git

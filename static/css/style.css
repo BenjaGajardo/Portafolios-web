@@ -27,11 +27,21 @@ body {
     justify-content: center;
     align-items: center;
     padding: 15px 0;
-    z-index: 1000;
+}
+
+.nav-hamburguesa {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8em;
+    cursor: pointer;
+    z-index: 1001; 
 }
 
 .nav-contenedor {
     display: flex;
+    /* La clave es permitir que la lista se envuelva */
+    flex-wrap: wrap; 
     align-items: center;
     justify-content: space-between;
     width: 90%;
@@ -45,11 +55,20 @@ body {
     margin-right: 100px;
 }
 
+/* El elemento de la lista ahora es el más importante */
 .nav-lista {
     list-style: none;
-    display: flex;
+    /* En escritorio, se comporta como una fila normal */
+    display: flex; 
     gap: 30px;
     margin-top: 10px;
+    display: flex;
+    /* La clave es permitir que la lista se envuelva */
+    flex-wrap: wrap;
+    
+    /* Le damos mucha prioridad para ocupar el espacio */
+    flex-grow: 1; 
+    justify-content: flex-end; /* Alinea los enlaces a la derecha */
 }
 
 .nav-lista a {
@@ -123,7 +142,21 @@ section:nth-child(even) {
 #home {
     position: relative;
     padding: 0;
-    height: 80vh; 
+    min-height: 80vh;
+
+background-image: url('../resources/imganes/fondo_home.jpg'); 
+    background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat;
+}
+
+.home-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .home-img {
@@ -136,16 +169,18 @@ section:nth-child(even) {
     z-index: 1;
 }
 
+/* Aseguramos que el contenido del HOME (home-hijo-mayor) esté por encima */
 .home-hijo-mayor {
     display: flex;
+    flex-wrap: wrap; 
     justify-content: space-around;
-    width: 90%;
+    width: 95%;
     max-width: 1200px;
     position: relative;
-    z-index: 3;
+    z-index: 3; /* El contenido debe tener un z-index alto */
     align-items: center;
+    padding: 20px 0;
 }
-
 /* Texto de bienvenida */
 .home-contenido {
     color: white;
@@ -366,7 +401,14 @@ section:nth-child(even) {
     flex-direction: column;
     align-items: center;
     padding-top: 250px; 
-    min-height: 90vh; 
+    min-height: 90vh;
+
+
+    background-image: 
+        url('../resources/imganes/fondo_education.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Imagen de fondo (Liceo) */
@@ -376,7 +418,6 @@ section:nth-child(even) {
     height: 250px; 
     object-fit: cover;
     opacity: 0.5; 
-    z-index: 0;
     top: 0;
     left: 0;
 }
@@ -386,7 +427,6 @@ section:nth-child(even) {
     position: absolute;
     text-align: center;
     color: white;
-    z-index: 1;
     top: 100px; 
 }
 
@@ -399,6 +439,7 @@ section:nth-child(even) {
     max-width: 1200px;
     margin-top: 40px; 
     gap: 40px; 
+    flex-wrap: wrap; 
 }
 
 /* Contenedor de la imagen (liceo) */
@@ -446,8 +487,26 @@ section:nth-child(even) {
 /* ===== 7. SECCIÓN CERTIFICADOS (Certificados) ===== */
 /* ========================================= */
 #certificados{
-    height: 90vh;
+    height: auto; 
+    padding: 80px 0; /* Asegura un padding en móvil */
     background-color: #1A1F22;
+    background-color: #1A1F22;
+}
+
+.tarjeta-certificados {
+    /* CONVERSIÓN A CSS GRID RESPONSIVO SIN MEDIA QUERIES */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px; 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    justify-items: center; 
+}
+
+.tarjeta-certificados .card { 
+    width: 100%; 
+    max-width: 600px; 
 }
 
 .card-img-top {
@@ -468,9 +527,14 @@ section:nth-child(even) {
     align-items: center;
     padding-top: 250px; 
     min-height: 90vh;
+
+    background-image: 
+        url('../resources/imganes/fondo_experience.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* Imagen de fondo */
 .experiencia-img {
     position: absolute;
     top: 0;
@@ -479,7 +543,7 @@ section:nth-child(even) {
     height: 250px; 
     object-fit: cover;
     z-index: 0; 
-    opacity: 0.6;
+    opacity: 0.6; 
 }
 
 /* Título de la sección */
@@ -488,19 +552,29 @@ section:nth-child(even) {
     text-align: center;
     color: white;
     z-index: 1;
+    top: 50px; 
+}
+
+/* Título de la sección */
+.experiencia-texto {
+    position: absolute;
+    text-align: center;
+    color: white;
+    z-index: 10; /* Asegura que el título siempre esté visible */
     top: 100px; 
 }
 
 /* Contenedor principal del contenido (Texto a la izquierda, Imágenes a la derecha) */
 .contenedor-hijo-mayor {
     display: flex;
-    flex-direction: row-reverse; /* Cambia el orden */
+    flex-direction: row-reverse; /* Mantiene la inversión de orden */
     justify-content: center;
     align-items: center;
     width: 90%;
     max-width: 1200px;
     margin-top: 40px;
     gap: 40px; 
+    flex-wrap: wrap; 
 }
 
 /* Bloque de texto de experiencia */
@@ -568,28 +642,18 @@ section:nth-child(even) {
 /* ========================================= */
 /* ===== 10. SECCIÓN PORTAFOLIO ===== */
 /* ========================================= */
+#portafolio {
+    height: auto; 
+    padding: 80px 0;
+}
+
 #portafolio .container {
-    padding: 0 20px;
-    width: 100%;
+    width: 95%; 
     max-width: 1200px;
+    padding: 0 10px; 
 }
 
-/* Fila principal de tarjetas de Bootstrap (Primeras 3) */
-#portafolio .row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px; 
-    margin-top: 20px;
-}
 
-.col {
-    /* Define el tamaño de la columna */
-    flex: 1 1 300px; 
-    max-width: 400px; 
-    margin-bottom: 30px; 
-    padding: 0; 
-}
 
 /* Contenedor de las dos tarjetas inferiores (personalizadas) */
 .tarjetas-portafolio {
